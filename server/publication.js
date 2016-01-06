@@ -14,7 +14,7 @@ Meteor.publish('pictureUploaded', function() {
 Meteor.publishComposite("projects", function() {
   return {
     find: function() {
-      return Projects.find({}, { fields: { name: 1, createdAt: 1, types: 1, logo: 1 } } );
+      return Projects.find({}, { fields: { comName: 1, createdAt: 1, types: 1, logo: 1 } } );
     },
     children: [
       {
@@ -29,12 +29,12 @@ Meteor.publishComposite("projects", function() {
 Meteor.publishComposite("projectsComposite", function() {
   return {
     find: function() {
-      return Projects.find({}, { fields: { name: 1, desc: 1, createdAt: 1, descPic: 1 } } );
+      return Projects.find({}, { fields: { proName: 1, desc: 1, createdAt: 1, descPic: 1 } } );
     },
     children: [
       {
-        find: function(bizPlan) {
-          return Pictures.find({_id: bizPlan.descPic});
+        find: function(project) {
+          return Pictures.find({_id: project.descPic});
         }
       },
     ]

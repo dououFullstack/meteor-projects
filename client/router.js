@@ -84,7 +84,7 @@ Router.map(function() {
     },
     data: function () {
       return {
-        project: Projects.find({}, {sort: {createdAt: -1}}),
+        projects: Projects.find({}, {sort: {createdAt: -1}}),
       };
     }
   });
