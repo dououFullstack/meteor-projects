@@ -66,7 +66,7 @@ Package.onUse(function(api) {
 
   //both
   api.addFiles([
-    // 'lib/collections.js',
+    'lib/collections.js',
     ],['client','server']);
 
   //server
