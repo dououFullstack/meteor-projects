@@ -1,0 +1,20 @@
+<template name="projectEdit">
+  <div class="container" style="padding-left: 5px; padding-right: 5px;">
+    <h4>编辑活动</h4>
+    {{#autoForm collection="Projects" doc=this id="projectFormUpdate" type="update"}}
+    <fieldset>
+      {{> afQuickField name='comName'}}
+      {{> afQuickField name='desc'}}
+      {{> afQuickField name='types'}}
+      {{> afQuickField name='rounds'}}
+      {{> afQuickField name="add"}}
+      {{> afQuickField name="teamSize"}}
+      {{> afQuickField name='logo'}}
+    </fieldset>
+
+        <a class="btn btn-default pull-right" role="button" href="{{pathFor 'projectsIndex'}}">返回</a>
+        <button type="submit" class="btn btn-warning pull-right">更新</button>
+
+    {{/autoForm}}
+  </div>
+</template>

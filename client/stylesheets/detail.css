@@ -1,0 +1,101 @@
+.sPostACon {
+  background-color: #F7F4EF;
+}
+.sPostAConTextCon {
+  margin: 0 0 20px 0;
+  font-size: 16px;
+  color: #333;
+  font-weight: normal;
+  line-height: 175%;
+  font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;
+}
+.sActList li {
+  padding: 0;
+  /*height: 44px;*/
+  color: #666;
+  font-size: 15px;
+  font-family: '华文细黑', 'Microsoft YaHei', Helvetica, Arial;
+  /*line-height: 44px;*/
+  background: #F7F4EF;
+  border-bottom: 1px solid #ded8d0;
+  border-top: 1px solid #fff;
+  /*line-height:inherit;*/
+  white-space:nowrap;
+  overflow: hidden;
+  text-overflow:ellipsis;
+}
+.sActListIcon {
+  float: left;
+  margin-top: 14px;
+  margin-bottom: 8px;
+  margin-right: 12px;
+  margin-left: 12px;
+  height: 22px;
+}
+.spantitle {
+  font-weight: bold;
+  font-size: 18px;
+  color: #AA56C5;
+}
+.leftbloder {
+  border-left-width: 10px;
+  margin: 0;
+  padding-left: 10px;
+  border-left: 5px solid #dbdbdb;
+}
+.fontquotesize {
+  margin: 0;
+  padding-left: 10px;
+  /*border-left: 5px solid #dbdbdb;*/
+  font-size: 14px;
+  color: rgb(170, 86, 197, 0.62);
+}
+#12342142142141241241200 {
+  border: 0px;
+  margin: 1em;
+  box-sizing: border-box;
+}
+#12342142142141241241201 {
+  font-size: 1em;
+  font-family: inherit;
+  text-decoration: inherit;
+  color: rgb(255, 255, 255);
+  border-color: rgb(142, 201, 101);
+  box-sizing: border-box;
+}
+#12342142142141241241202 {
+  padding: 3px 8px;
+  line-height: 1.4;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-family: inherit;
+  box-sizing: border-box;
+  background-color: rgb(142, 201, 101);
+}
+#12342142142141241241200 {
+  box-sizing: border-box;
+}
+#12342142142141241241203 {
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 0px 1px 1px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  border-color: rgb(142, 201, 101);
+}
+#12342142142141241241204 {
+  padding: 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  line-height: 1.4; font-size: 1em;
+  font-family: inherit;
+  text-decoration: inherit;
+  color: rgb(51, 51, 51);
+  border-color: rgb(142, 201, 101);
+  box-sizing: border-box;
+}
+#12342142142141241241205 {
+  width: 0px;
+  height: 0px;
+  clear: both;
+}

@@ -1,0 +1,39 @@
+<template name="projectDetail">
+  {{#with project}}
+    <div class="container">
+      <div class="">
+        <div class="noticemain">
+            <strong class="glyphicon glyphicon-list">已投资项目详情</strong>
+        </div>
+        <div class="notice notice-success">
+          <strong>公司名称:</strong> {{comName}}
+        </div>
+        <div class="notice notice-info">
+          <strong>项目简介:</strong> {{desc}}
+        </div>
+        <div class="notice notice-danger">
+          <strong>公司类型:</strong> {{types}}
+        </div>
+        <div class="notice notice-warning">
+          <strong>投资轮次:</strong> {{rounds}}
+        </div>
+        <div class="notice notice-sm">
+          <strong>公司地址:</strong> {{add}}
+        </div>
+        <div class="notice notice-success">
+          <strong>团队规模:</strong> {{teamSize}}
+        </div>
+        <div class="notice notice-danger">
+          <strong>公司LOGO:</strong> <img src="{{file.url}}" width='100%' class="f_inewsimgproject">
+        </div>
+        <div class="notice notice-button">
+          <a class="btn btn-sm btn-default" href="{{pathFor 'projectsIndex'}}" role="button">返回</a>
+          {{#if isAdmin}}
+            <a class="btn btn-sm btn-success" href="{{pathFor 'projectEdit'}}" role="button">编辑</a>
+            <a class="btn btn-sm btn-danger delete-project" href="#" role="button">删除</a>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/with}}
+</template>

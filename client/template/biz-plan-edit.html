@@ -1,0 +1,27 @@
+<template name="bizPlanEdit">
+  <div class="container" style="padding-left: 5px; padding-right: 5px;">
+    <h4 style="text-align: center;margin-top:20px;margin-bottom: 15px;">编辑活动</h4>
+      <div class="container">
+          {{#autoForm collection="projects" doc=this id="bizPlanFormUpdate" type="update"}}
+              <fieldset>
+                  {{> afQuickField name='proName'}}
+                  {{> afQuickField name='desc'}}
+                  {{> afQuickField name="descPic"}}
+                  {{> afQuickField name="bizModel"}}
+                  {{> afQuickField name='competency'}}
+                  {{> afQuickField name="competencyPic"}}
+                  {{> afQuickField name='types'}}
+                  {{> afQuickField name='team'}}
+                  {{> afQuickField name="teamPic"}}
+                  {{> afQuickField name='fund'}}
+                  {{> afQuickField name='email'}}
+                  {{> afQuickField name='phone'}}
+              </fieldset>
+              <a class="btn btn-default pull-right" role="button" href="{{pathFor 'bizPlansIndex'}}">返回</a>
+              <button type="submit" class="btn btn-warning pull-right">更新</button>
+
+          {{/autoForm}}
+      </div>
+
+  </div>
+</template>

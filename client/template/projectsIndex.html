@@ -1,0 +1,28 @@
+<template name="projectsIndex">
+  {{#if isAdmin}}
+      <div class="add-new-button">
+          <a href="{{pathFor 'projectsNew'}}" >添加项目</a>
+      </div>
+
+  {{/if}}
+  <div class="" style="padding-bottom: 25px;">
+    <h4 style="padding-left: 12px; text-align:center;"><b class="glyphicon glyphicon-hand-down" style="margin: 10px 3px;">已投资项目列表</b></h4><hr style="margin-bottom: 0px; margin-top: 0px;">
+    {{#each projects}}
+    <div class="f_inews">
+      <ul class="f_inews_lis" id="f_inews_lis_ul">
+        <a href="{{pathFor 'projectDetail'}}">
+          <li>
+            <img src="{{file.url}}" class="f_inewsimgproject">
+            <div class="f_inewscon">
+              <h4><a href="{{pathFor 'projectDetail'}}">{{comName}}</a><span id="timeshow">{{formatdatetime1 createdAt}}</span></h4>
+              <p class="clears">{{types}}</p>
+            </div>
+          </li>
+        </a>
+      </ul>
+    </div>
+    {{else}}
+      <h5 class="explanation">还没有投资任何项目,请用admin登录添加投资项目表.</h5>
+    {{/each}}
+  </div>
+</template>

@@ -1,0 +1,16 @@
+.form-control {
+  background-color: rgba(239, 239, 239, 0.59);
+}
+.descPic {
+  margin-left: 15px;
+}
+.odform-tit {
+  font-weight:bold;
+  font-size:20px;
+  color:#595757;
+  line-height:40px;
+  text-align:center;
+  border-bottom:1px solid #c9cacb;
+  margin:0;
+  padding:2% 0;
+}

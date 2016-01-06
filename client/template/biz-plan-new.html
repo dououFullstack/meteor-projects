@@ -1,0 +1,32 @@
+<template name="bizPlanNew">
+  <div class="container" style="padding-left: 5px; padding-right: 5px;">
+    <h4 class="odform-tit" style="margin-top:20px;"><strong class="glyphicon glyphicon-open">上传你的商业计划书(BP)</strong></h4><br>
+    <div class="container">
+        {{#autoForm collection="projects" id="bizPlanForm" type="insert"}}
+            <fieldset>
+                {{> afQuickField name='proName'}}
+                {{> afQuickField name='desc'}}
+                {{> afQuickField name="descPic" class="descPic"}}<hr>
+                {{> afQuickField name="bizModel"}}
+                {{> afQuickField name='competency'}}
+                {{> afQuickField name="competencyPic"}}<hr>
+                {{> afQuickField name='types'}}
+                {{> afQuickField name='team'}}
+                {{> afQuickField name="teamPic"}}<hr>
+                {{> afQuickField name='fund'}}
+                {{> afQuickField name='email'}}
+                {{> afQuickField name='phone'}}
+            </fieldset>
+            <ul style="float: right;">
+                <button type="submit" class="btn btn-warning">提交</button>
+                <input type="reset" class="btn btn-default" value="清除">
+            </ul>
+        {{/autoForm}}
+    </div>
+
+  </div>
+</template>
+
+<template name="myFilePreviewForBizPlan">
+  <img src="{{file.url}}" alt="{{file.original.name}}" width="150px;"/>
+</template>

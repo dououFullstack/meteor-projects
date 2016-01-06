@@ -1,0 +1,22 @@
+ <template name="bizPlansIndex">
+  {{#if isAdmin}}
+    <h4 style="margin-top: 15px; text-align: center;"><strong class="glyphicon glyphicon-">用户上传的BP列表</strong></h4><hr style="margin-bottom: 0;">
+    {{#each projects}}
+      <div class="f_inews">
+        <ul class="f_inews_lis" id="f_inews_lis_ul">
+          <a href="{{pathFor 'bizPlanDetail'}}">
+          <li>
+            <img src="{{file.url}}" class="f_inewsimg">
+            <div class="f_inewscon">
+              <h4><a href="{{pathFor 'bizPlanDetail'}}" >{{proName}}</a><span id="timeshow">{{formatdatetime1 createdAt}}</span></h4>
+              <p class="clears">{{desc}}</p>
+            </div>
+          </li>
+          </a>
+        </ul>
+      </div>
+    {{/each}}
+  {{else}}
+    {{> bizPlanNew}}
+  {{/if}}
+</template>

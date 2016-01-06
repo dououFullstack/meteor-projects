@@ -1,0 +1,237 @@
+<template name="bizPlanDetail">
+  {{#with project}}
+    <div class="biz-plan-detail">
+        <div class="biz-plan-intro">
+            <div class="media">
+                <div class="media-left media-top">
+                    <a href="#" type="button" class="" data-toggle="modal" data-target="#myIntro">
+
+                        <img class="media-object bizpostImage" src="{{introFile.url}}" alt="">
+
+
+                    </a>
+                    <span style="font-size: 12px;">点击打开</span>
+                </div>
+                <div class="media-body">
+                    <h4 class="media-heading text-success">{{{str2html proName}}}</h4>
+                    <h5>项目简介</h5>
+                    <p><small>{{{str2html desc}}}</small></p>
+                </div>
+            </div>
+
+            <div class="modal fade" id="myIntro" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">项目简介相关图片</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{introFile.url}}">
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="intro-collapse">
+                <button class="btn " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    阅读细节
+                </button>
+                <div class="collapse" id="collapseExample">
+                    <div class="well">
+                        <div class="media">
+                            <div class="media-left">
+                                <span class="sActListIcon glyphicon glyphicon-list-alt"></span>
+                            </div>
+                            <div class="media-body">
+                                <p><strong>项目类型</strong></p>
+                                <p><light>{{types}}</light></p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <span class="sActListIcon glyphicon glyphicon-usd"></span>
+                            </div>
+                            <div class="media-body">
+                                <p><strong>融资额度</strong></p>
+                                <p><light>{{fund}}</light></p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <span class="sActListIcon glyphicon glyphicon-phone-alt"></span>
+                            </div>
+                            <div class="media-body">
+                                <p><strong>联系电话</strong></p>
+                                <p><light>{{phone}}</light></p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="media-left">
+                                <span class="sActListIcon glyphicon glyphicon-envelope"></span>
+                            </div>
+                            <div class="media-body">
+                                <p><strong>邮箱地址</strong></p>
+                                <p><light>{{email}}</light></p>
+                            </div>
+                        </div>
+
+                        <button class="btn btn-default" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                            关闭
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="biz-plan-bizModel">
+            <div class="media">
+                <div class="media-body">
+                    <h5 class="media-heading">商业模式</h5>
+                    <p><small>{{{str2html bizModel}}}</small></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="biz-plan-compet">
+            <div class="media">
+                <div class="media-left media-top">
+                    <a href="#" type="button" class="" data-toggle="modal" data-target="#myCompet">
+                        <img class="media-object bizpostImage" src="{{competiFile.url}}" alt="">
+                    </a>
+                    <span style="font-size: 12px;">点击打开</span>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">核心竞争力</h5>
+                    <p><small>{{{str2html competency}}}</small></p>
+                </div>
+            </div>
+            <!-- Modal -->
+            <div class="modal fade" id="myCompet" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title" id="myModalLabel">核心竞争力</h4>
+                        </div>
+                        <div class="modal-body">
+                            <img src="{{competiFile.url}}" >
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn" data-dismiss="modal">关闭</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="biz-plan-team">
+            <div class="media">
+                <div class="media-left media-top">
+                    <a href="#" type="button" class="" data-toggle="modal" data-target="#myTeam">
+                        <img class="media-object bizpostImage" src="{{teamFile.url}}" alt="">
+                    </a>
+                    <span style="font-size: 12px;">点击打开</span>
+                </div>
+                <div class="media-body">
+                    <h5 class="media-heading">团队介绍</h5>
+                    <p><small>{{{str2html team}}}</small></p>
+                </div>
+            </div>
+
+                <div class="modal fade" id="myTeam" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">团队介绍</h4>
+                            </div>
+                            <div class="modal-body">
+                                <img src="{{teamFile.url}}">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn" data-dismiss="modal">关闭</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+
+
+
+      <!--<div class="sPostACon">-->
+        <!--<section style="border: 0px; margin: 10px; box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(142, 201, 101); box-sizing: border-box;"><section style="padding: 3px 8px; line-height: 1.4; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: inherit; box-sizing: border-box; background-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">项目名称: </section></section><section style="box-sizing: border-box; border-style: solid; border-width: 0px 1px 1px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section style="padding: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; line-height: 1.4; font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(51, 51, 51); border-color: rgb(142, 201, 101); box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">{{{str2html name}}}</section></section></section></section><section style="width: 0px; height: 0px; clear: both;"></section></section>-->
+        <!--<section style="border: 0px; margin: 10px; box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(142, 201, 101); box-sizing: border-box;"><section style="padding: 3px 8px; line-height: 1.4; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: inherit; box-sizing: border-box; background-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">项目简介: </section></section><section style="box-sizing: border-box; border-style: solid; border-width: 0px 1px 1px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section style="padding: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; line-height: 1.4; font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(51, 51, 51); border-color: rgb(142, 201, 101); box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">{{{str2html desc}}}</section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><img alt="image" class="bizpostImage" src="{{incroFile.url}}"></section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section></section></section></section><section style="width: 0px; height: 0px; clear: both;"></section></section>-->
+        <!--<section style="border: 0px; margin: 10px; box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(142, 201, 101); box-sizing: border-box;"><section style="padding: 3px 8px; line-height: 1.4; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: inherit; box-sizing: border-box; background-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">商业模式: </section></section><section style="box-sizing: border-box; border-style: solid; border-width: 0px 1px 1px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section style="padding: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; line-height: 1.4; font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(51, 51, 51); border-color: rgb(142, 201, 101); box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">{{{str2html bizModel}}}</section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section></section></section></section><section style="width: 0px; height: 0px; clear: both;"></section></section>-->
+        <!--<section style="border: 0px; margin: 10px; box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(142, 201, 101); box-sizing: border-box;"><section style="padding: 3px 8px; line-height: 1.4; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: inherit; box-sizing: border-box; background-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">核心竞争力: </section></section><section style="box-sizing: border-box; border-style: solid; border-width: 0px 1px 1px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section style="padding: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; line-height: 1.4; font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(51, 51, 51); border-color: rgb(142, 201, 101); box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">{{{str2html competency}}}</section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><img alt="image" class="bizpostImage" src="{{competiFile.url}}"></section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section></section></section></section><section style="width: 0px; height: 0px; clear: both;"></section></section>-->
+        <!--<section style="border: 0px; margin: 10px; box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(255, 255, 255); border-color: rgb(142, 201, 101); box-sizing: border-box;"><section style="padding: 3px 8px; line-height: 1.4; border-top-left-radius: 8px; border-top-right-radius: 8px; font-family: inherit; box-sizing: border-box; background-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">团队介绍: </section></section><section style="box-sizing: border-box; border-style: solid; border-width: 0px 1px 1px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-color: rgb(142, 201, 101);" class="tn-Powered-by-XIUMI"><section style="padding: 16px; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; line-height: 1.4; font-size: 1em; font-family: inherit; text-decoration: inherit; color: rgb(51, 51, 51); border-color: rgb(142, 201, 101); box-sizing: border-box;" class="tn-Powered-by-XIUMI"><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;">{{{str2html team}}}</section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><img alt="image" class="bizpostImage" src="{{teamFile.url}}"></section><section class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"><br class="tn-Powered-by-XIUMI" style="box-sizing: border-box;"></section></section></section></section><section style="width: 0px; height: 0px; clear: both;"></section></section>-->
+      <!--</div>-->
+      <!--<ul class="sActList" style="padding-left: 0px;">-->
+        <!--<li>-->
+          <!--<span class="sActListIcon glyphicon glyphicon-list-alt"></span>-->
+          <!--<span>项目类型: </span>-->
+          <!--<span>{{types}}</span>-->
+        <!--</li>-->
+        <!--&lt;!&ndash; <li>-->
+          <!--<span class="sActListIcon glyphicon glyphicon-list-alt"></span>-->
+          <!--<span>项目类型: </span>-->
+          <!--<span>{{checkbox}}</span>-->
+        <!--</li> &ndash;&gt;-->
+        <!--<li>-->
+          <!--<span class="sActListIcon glyphicon glyphicon-usd"></span>-->
+          <!--<span>融资额度: </span>-->
+          <!--<span>{{fund}}</span>-->
+        <!--</li>-->
+        <!--<li>-->
+          <!--<span class="sActListIcon glyphicon glyphicon-phone-alt"></span>-->
+          <!--<span>联系电话：</span>-->
+          <!--<span>{{phone}}</span>-->
+        <!--</li>-->
+        <!--<li id="where">-->
+          <!--<span class="sActListIcon glyphicon glyphicon-envelope"></span>-->
+          <!--<span>邮箱地址：</span>-->
+          <!--<span>{{email}}</span>-->
+        <!--</li>-->
+        <!--{{#if isAdmin}}-->
+          <!--&lt;!&ndash; <li style="padding-left: 10px; display: none;"> &ndash;&gt;-->
+            <!--&lt;!&ndash; <li style="padding-left: 10px; visibility:hidden;"> &ndash;&gt;-->
+          <!--<li style="padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-bottom: 10px;">-->
+              <!--<a class="btn btn-sm btn-default pull-right" href="{{pathFor 'bizPlansIndex'}}" role="button">返回</a>-->
+              <!--<a class="btn btn-sm btn-danger delete-bizplan pull-right" href="#" role="button">删除</a>-->
+              <!--<a class="btn btn-sm btn-success pull-right" href="{{pathFor 'bizPlanEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>-->
+
+          <!--</li>-->
+        <!--{{else}}-->
+          <!--<li style="padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-bottom: 10px;">-->
+            <!--<a class="btn btn-sm btn-default pull-right" href="{{pathFor 'bizPlansIndex'}}" role="button">返回</a>-->
+            <!--<a class="btn btn-sm btn-success pull-right" href="{{pathFor 'bizPlanEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>-->
+          <!--</li>-->
+        <!--{{/if}}-->
+      <!--</ul>-->
+
+        {{#if isAdmin}}
+            <!-- <li style="padding-left: 10px; display: none;"> -->
+            <!-- <li style="padding-left: 10px; visibility:hidden;"> -->
+            <li style="padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-bottom: 80px;">
+                <a class="btn btn-sm btn-default pull-right" href="{{pathFor 'bizPlansIndex'}}" role="button">返回</a>
+                <a class="btn btn-sm btn-danger delete-bizplan pull-right" href="#" role="button">删除</a>
+                <a class="btn btn-sm btn-success pull-right" href="{{pathFor 'bizPlanEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>
+
+            </li>
+        {{else}}
+            <li style="padding-left: 10px;padding-top: 10px;padding-bottom: 10px;margin-bottom: 80px;">
+                <a class="btn btn-sm btn-default pull-right" href="{{pathFor 'bizPlansIndex'}}" role="button">返回</a>
+                <a class="btn btn-sm btn-success pull-right" href="{{pathFor 'bizPlanEdit'}}" role="button" style="margin-right: 10px; margin-left: 10px;">编辑</a>
+            </li>
+        {{/if}}
+
+    </div>
+  {{/with}}
+</template>
